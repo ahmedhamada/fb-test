@@ -1,1 +1,5 @@
-test new file
+<?php 
+
+phpinfo();
+
+ ?>
