@@ -1,5 +1,4 @@
 <?php 
 
-phpinfo();
-
+echo 'edit done'
  ?>
