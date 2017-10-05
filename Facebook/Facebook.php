@@ -63,12 +63,12 @@ class Facebook
     /**
      * @const string The name of the environment variable that contains the app ID.
      */
-    const APP_ID_ENV_NAME = 'FACEBOOK_APP_ID';
+    const APP_ID_ENV_NAME = '1695277584089621';
 
     /**
      * @const string The name of the environment variable that contains the app secret.
      */
-    const APP_SECRET_ENV_NAME = 'FACEBOOK_APP_SECRET';
+    const APP_SECRET_ENV_NAME = '6c6c982391f0bb76b482e700abd2a516';
 
     /**
      * @var FacebookApp The FacebookApp entity.
