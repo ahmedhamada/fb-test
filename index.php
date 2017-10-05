@@ -1,6 +1,5 @@
 <?php 
 
-echo 'edit done';
-echo 'welcome here';
+echo 'testing deplyment';
 phpinfo();
  ?>
