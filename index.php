@@ -1,5 +1,6 @@
 <?php 
 
 echo 'edit done';
-echo 'welcome here'
+echo 'welcome here';
+phpinfo();
  ?>
