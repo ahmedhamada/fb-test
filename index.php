@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . '/facebook/autoload.php'; // change path as needed
+/*require_once __DIR__ . '/facebook/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
   'app_id' => '{app-id}',
@@ -29,5 +29,7 @@ try {
 }
 
 $me = $response->getGraphUser();
-echo 'Logged in as ' . $me->getName();
+echo 'Logged in as ' . $me->getName();*/
+
 ?>
+شسيشسيشسيشسي
