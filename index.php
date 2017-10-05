@@ -33,4 +33,4 @@ echo 'Logged in as ' . $me->getName();*/
 
 ?>
 
-ahmed is here
+local test time
