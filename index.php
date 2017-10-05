@@ -13,7 +13,7 @@ $fb = new \Facebook\Facebook([
 //   $helper = $fb->getJavaScriptHelper();
 //   $helper = $fb->getCanvasHelper();
 //   $helper = $fb->getPageTabHelper();
-
+/*
 try {
   // Get the \Facebook\GraphNodes\GraphUser object for the current user.
   // If you provided a 'default_access_token', the '{access-token}' is optional.
@@ -27,7 +27,7 @@ try {
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
   exit;
 }
-
+*/
 $me = $response->getGraphUser();
 echo 'Logged in as ' . $me->getName();
 
