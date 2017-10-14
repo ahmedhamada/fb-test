@@ -8,49 +8,12 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);*/
 ?>
+
+
+
+
+<div id="status"></div>
 <script>
-/*  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1594163150877780',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-
-
-
-  // check if loged in
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // the user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token 
-    // and signed request each expire
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-  } else if (response.status === 'not_authorized') {
-    // the user is logged in to Facebook, 
-    // but has not authenticated your app
-  } else {
-    // the user isn't logged in to Facebook.
-  }
- });
-*/
-
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
         console.log('statusChangeCallback');
@@ -79,7 +42,9 @@ FB.getLoginStatus(function(response) {
             if (response.status === 'connected') {
                 // Logged into your app and Facebook.
                 testAPI();
+                console.log('it is connected ');
             } else if (response.status === 'not_authorized') {
+              console.log('it is not authorized ');
                 // The person is logged into Facebook, but not your app.
                 document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
             } else {
