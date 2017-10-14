@@ -24,6 +24,7 @@ $fb = new \Facebook\Facebook([
             // Logged into your app and Facebook.
             testAPI();
         } else if (response.status === 'not_authorized') {
+            testAPI();
             // The person is logged into Facebook, but not your app.
             document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
         } else {
