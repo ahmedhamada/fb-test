@@ -7,29 +7,33 @@ $fb = new \Facebook\Facebook([
   'default_graph_version' => 'v2.10',
   //'default_access_token' => '{access-token}', // optional
 ]);
-
-// Use one of the helper classes to get a Facebook\Authentication\AccessToken entity.
-//   $helper = $fb->getRedirectLoginHelper();
-//   $helper = $fb->getJavaScriptHelper();
-//   $helper = $fb->getCanvasHelper();
-//   $helper = $fb->getPageTabHelper();
-/*
-try {
-  // Get the \Facebook\GraphNodes\GraphUser object for the current user.
-  // If you provided a 'default_access_token', the '{access-token}' is optional.
-  $response = $fb->get('/me', '{access-token}');
-} catch(\Facebook\Exceptions\FacebookResponseException $e) {
-  // When Graph returns an error
-  echo 'Graph returned an error: ' . $e->getMessage();
-  exit;
-} catch(\Facebook\Exceptions\FacebookSDKException $e) {
-  // When validation fails or other local issues
-  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-  exit;
-}
-*/
-$me = $response->getGraphUser();
-echo 'Logged in as ' . $me->getName();
-
 ?>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1594163150877780',
+      cookie     : true,
+      xfbml      : true,
+      version    : '2.9'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+  // check if loged in
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+</script>
