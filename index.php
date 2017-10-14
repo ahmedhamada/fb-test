@@ -14,7 +14,7 @@ $fb = new \Facebook\Facebook([
       appId      : '1594163150877780',
       cookie     : true,
       xfbml      : true,
-      version    : '2.9'
+      version    : 'v2.10'
     });
       
     FB.AppEvents.logPageView();   
