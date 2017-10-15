@@ -68,7 +68,7 @@ $fb = new \Facebook\Facebook([
         FB.init({
             appId   : '1695277584089621',
             xfbml   : true,
-            version : 'v2.6'
+            version : 'v2.10'
         });
 
         // Now that we've initialized the JavaScript SDK, we call FB.getLoginStatus().
