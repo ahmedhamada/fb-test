@@ -32,7 +32,7 @@ $(document).ready(function(){
 <body>
 <div class="container">
     <?php if (isset($_SESSION['facebook_access_token'])): ?>
-        <center> number of posts is: </center>
+        <center> the number is  </center>
     <?php else: ?>
         <h2 style="text-align: center;">know the number of posts you create on facebook</h2>
     <?php endif ?>
