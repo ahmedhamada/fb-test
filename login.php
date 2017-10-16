@@ -82,7 +82,7 @@ if (isset($accessToken)) {
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
         
-      echo '<center> <h3>'.$posts_count = count($profile['posts']) . 'post<h3></center><br>'; 
+      echo '<center> <h3 class="gold">'.$posts_count = count($profile['posts']) . 'posts<h3></center><br>'; 
 
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
@@ -127,7 +127,7 @@ if (isset($accessToken)) {
 
 <style type="text/css">
 body{
-    background: #101012 url(images/chalkboard.jpg) no-repeat top center;
+    background: #101012 url(chalkboard.jpg) no-repeat top center;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
@@ -137,5 +137,8 @@ body{
     margin: 0 auto;
     background-color: white;
     border-radius: 15px;
+}
+.gold{
+    color: gold;
 }
 </style>
