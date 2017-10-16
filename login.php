@@ -1,5 +1,20 @@
 <?php
 session_start();
+?>
+
+
+<body>
+<div class="container">
+    <?php if (isset($_SESSION['facebook_access_token'])): ?>
+    <?php else: ?>
+        <h2 style="text-align: center;">know the number of posts you create on facebook</h2>
+    <?php endif ?>
+
+
+
+
+
+<?php
 require_once __DIR__ . '/Facebook/autoload.php';
  
 $fb = new Facebook\Facebook([
@@ -64,17 +79,9 @@ if (isset($accessToken)) {
         // $profile_request = $fb->get('/me?fields=posts.limit(555){permalink_url}');
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
-        echo "nummber of posts you created is: " . count($profile['posts']) . '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[1]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[2]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[3]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[0][0]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[0][1]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[0][2]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[0][3]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[1][0]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[1][1]). '<br>'; 
-        echo "nummber of posts you created is: " . count($profile[1][2]). '<br>'; 
+        
+        $posts_count = count($profile['posts']) . '<br>'; 
+
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
         echo 'Graph returned an error: ' . $e->getMessage();
@@ -89,24 +96,44 @@ if (isset($accessToken)) {
     }
      
     // printing $profile array on the screen which holds the basic info about user
-    print_r($profile);
+    // all return info
+    // print_r($profile);
  
     // Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 } else {
     // replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
     $loginUrl = $helper->getLoginUrl('https://just-it.herokuapp.com/login.php', $permissions);
-    echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
+    echo '<center><a href="' . $loginUrl . '">Log in with Facebook!</a><center>';
 }
 
 
 
-
-
-
 ?>
+
+
+
+
+</div><!-- end container -->
+</body>
+
+
+
+
+
+
+
+
 <style type="text/css">
+body{
     background: #101012 url(images/chalkboard.jpg) no-repeat top center;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+}
+.container{
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+}
 </style>
