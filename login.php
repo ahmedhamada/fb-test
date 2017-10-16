@@ -85,3 +85,16 @@ if (isset($accessToken)) {
     $loginUrl = $helper->getLoginUrl('https://just-it.herokuapp.com/login.php', $permissions);
     echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
+
+
+
+
+
+
+?>
+<style type="text/css">
+    background: #101012 url(images/chalkboard.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+</style>
