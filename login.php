@@ -12,6 +12,9 @@ $helper = $fb->getRedirectLoginHelper();
  
 $permissions = ['email']; // optional
      
+
+
+// no need for explain
 try {
     if (isset($_SESSION['facebook_access_token'])) {
         $accessToken = $_SESSION['facebook_access_token'];
@@ -28,6 +31,9 @@ try {
     echo 'Facebook SDK returned an error: ' . $e->getMessage();
     exit;
  }
+
+
+
  
 if (isset($accessToken)) {
     if (isset($_SESSION['facebook_access_token'])) {
@@ -55,7 +61,7 @@ if (isset($accessToken)) {
  
     // getting basic info about user
     try {
-        $profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
+        $profile_request = $fb->get('/me?fields=name,first_name,last_name,email,about');
         $profile = $profile_request->getGraphNode()->asArray();
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
