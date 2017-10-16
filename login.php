@@ -8,6 +8,9 @@ session_start();
 <meta property="og:url" content="tested by ahmed hamada" />
 <meta property="og:type" content="website" />  
 <meta property="og:image" content="https://just-it.herokuapp.com/what.png" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="100" />
+<meta property="og:image:height" content="100" />
 
 
 
