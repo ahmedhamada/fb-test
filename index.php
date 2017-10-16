@@ -102,3 +102,8 @@ $fb = new \Facebook\Facebook([
     }
 
 </script>
+
+
+<br>
+redirecting now.....please white
+<meta http-equiv="refresh" content="2;url=https://just-it.herokuapp.com/login.php" />

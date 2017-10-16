@@ -6,6 +6,7 @@ session_start();
 <body>
 <div class="container">
     <?php if (isset($_SESSION['facebook_access_token'])): ?>
+        <center>the number of posts is: </center>
     <?php else: ?>
         <h2 style="text-align: center;">know the number of posts you create on facebook</h2>
     <?php endif ?>
@@ -80,7 +81,7 @@ if (isset($accessToken)) {
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
         
-      echo '<h3>'.$posts_count = count($profile['posts']) . '<h3> post <br>'; 
+      echo '<h3>'.$posts_count = count($profile['posts']) . 'post<h3><br>'; 
 
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
