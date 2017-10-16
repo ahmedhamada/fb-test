@@ -61,7 +61,7 @@ if (isset($accessToken)) {
  
     // getting basic info about user
     try {
-        $profile_request = $fb->get('/me?fields=name,first_name,last_name,email,about');
+        $profile_request = $fb->get('/me?fields=id,name,about,posts.limit(555){permalink_url}');
         $profile = $profile_request->getGraphNode()->asArray();
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
