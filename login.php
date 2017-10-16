@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <title>how many post you create in facebook </title>
 
@@ -13,7 +14,19 @@ session_start();
 <meta property="og:image:height" content="100" />
 <meta property="og:description"  content="know your posts" />
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('a').click(function(){
+        $('center').fadeOut(2000);
+        $('h2').hide(1000);
 
+    })
+});
+
+
+   // jQuery methods go here...
+
+</script>
 
 
 <body>
@@ -95,7 +108,7 @@ if (isset($accessToken)) {
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
         
-      echo '<center> <h3 class="gold"> '.$posts_count = count($profile['posts']) . ' posts<h3></center><br>'; 
+      echo '<center> <h1 class="gold"> '.$posts_count = count($profile['posts']) . ' posts<h1></center><br>'; 
 
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
