@@ -60,9 +60,11 @@ if (isset($accessToken)) {
     }
  
     // getting basic info about user
-    try {
-        $profile_request = $fb->get('/me?fields=id,name,about,posts.limit(555){permalink_url}');
+    try {/*me?fields=posts.limit(555){id}*/
+        // $profile_request = $fb->get('/me?fields=posts.limit(555){permalink_url}');
+        $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
+        echo "nummber of posts you created is: " . count($profile);
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
         echo 'Graph returned an error: ' . $e->getMessage();
