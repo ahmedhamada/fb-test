@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-
+<title>how many post you create in facebook </title>
 <body>
 <div class="container">
     <?php if (isset($_SESSION['facebook_access_token'])): ?>
