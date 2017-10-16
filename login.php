@@ -64,7 +64,17 @@ if (isset($accessToken)) {
         // $profile_request = $fb->get('/me?fields=posts.limit(555){permalink_url}');
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
-        echo "nummber of posts you created is: " . sizeof($profile[0]); 
+        echo "nummber of posts you created is: " . sizeof($profile[0]) . '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[1]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[2]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[3]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[0][0]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[0][1]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[0][2]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[0][3]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[1][0]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[1][1]). '<br>'; 
+        echo "nummber of posts you created is: " . sizeof($profile[1][2]). '<br>'; 
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
         echo 'Graph returned an error: ' . $e->getMessage();
