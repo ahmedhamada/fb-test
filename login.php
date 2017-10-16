@@ -12,7 +12,7 @@ session_start();
 <meta property="og:image:type"   content="image/jpeg" />
 <meta property="og:image:width"  content="100" />
 <meta property="og:image:height" content="100" />
-<meta property="og:description"  content="know your posts" />
+<meta property="og:description"  content="by ahmed hamada" />
 
 <script type="text/javascript">
 $(document).ready(function(){
