@@ -4,14 +4,14 @@ session_start();
 
 <title>how many post you create in facebook </title>
 
-<meta property="og:title" content="how many post you created in facebook" />
-<meta property="og:url" content="http://www.yourposts.com" />
-<meta property="og:type" content="website" />  
-<meta property="og:image" content="https://just-it.herokuapp.com/what.png" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="100" />
+<meta property="og:url"          content="http://www.yourposts.com" />
+<meta property="og:title"        content="how many post you created in facebook" />
+<meta property="og:type"         content="website" />  
+<meta property="og:image"        content="https://just-it.herokuapp.com/what.png" />
+<meta property="og:image:type"   content="image/jpeg" />
+<meta property="og:image:width"  content="100" />
 <meta property="og:image:height" content="100" />
-<meta property="og:description" content="know your posts" />
+<meta property="og:description"  content="know your posts" />
 
 
 
