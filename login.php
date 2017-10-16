@@ -80,7 +80,7 @@ if (isset($accessToken)) {
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
         
-        $posts_count = count($profile['posts']) . '<br>'; 
+      echo '<h3>'.$posts_count = count($profile['posts']) . '<h3> post <br>'; 
 
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
