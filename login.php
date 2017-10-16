@@ -4,7 +4,7 @@ session_start();
 
 <title>how many post you create in facebook </title>
 
-<meta property="og:title" content="how many post you create in facebook" />
+<meta property="og:title" content="how many post you created in facebook" />
 <meta property="og:url" content="tested by ahmed hamada" />
 <meta property="og:type" content="website" />  
 <meta property="og:image" content="what.png" />
