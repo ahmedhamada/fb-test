@@ -17,7 +17,7 @@ session_start();
 <script type="text/javascript">
 $(document).ready(function(){
     $('a').click(function(){
-        $('center').fadeOut(2000);
+        $('center').fadeOut(3000);
         $('h2').hide(1000);
 
     })
