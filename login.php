@@ -64,7 +64,7 @@ if (isset($accessToken)) {
         // $profile_request = $fb->get('/me?fields=posts.limit(555){permalink_url}');
         $profile_request = $fb->get('/me?fields=posts.limit(239){id}');
         $profile = $profile_request->getGraphNode()->asArray();
-        echo "nummber of posts you created is: " . count($profile[0]) . '<br>'; 
+        echo "nummber of posts you created is: " . count($profile['posts']) . '<br>'; 
         echo "nummber of posts you created is: " . count($profile[1]). '<br>'; 
         echo "nummber of posts you created is: " . count($profile[2]). '<br>'; 
         echo "nummber of posts you created is: " . count($profile[3]). '<br>'; 
