@@ -53,12 +53,12 @@ $fb = new Facebook\Facebook([
  
 $helper = $fb->getRedirectLoginHelper();
  
-// $permissions = ['email,user_about_me,user_posts,public_profile,user_friends']; // optional
-$permissions =  array(
+$permissions = ['email,user_about_me,user_posts,public_profile,user_friends']; // optional
+/*$permissions =  array(
      scope => 'read_stream,publish_stream,publish_actions,read_friendlists',
      redirect_uri => 'https://just-it.herokuapp.com/login.php'
   );
-
+*/
 
 // no need for explain
 try {
@@ -133,8 +133,8 @@ if (isset($accessToken)) {
     // Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 } else {
     // replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
-    $loginUrl = $helper->getLoginUrl($permissions);
-    // $loginUrl = $helper->getLoginUrl('https://just-it.herokuapp.com/login.php', $permissions);
+    // $loginUrl = $helper->getLoginUrl($permissions);
+    $loginUrl = $helper->getLoginUrl('https://just-it.herokuapp.com/login.php', $permissions);
     echo '<center><a href="' . $loginUrl . '">Log in with Facebook!</a><center>';
 }
 
