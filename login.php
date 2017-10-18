@@ -53,7 +53,7 @@ $fb = new Facebook\Facebook([
  
 $helper = $fb->getRedirectLoginHelper();
  
-$permissions = ['user_posts,email,public_profile,user_birthday']; // optional
+$permissions = ['user_posts,public_profile,user_birthday']; // optional
 /*$permissions =  array(
      scope => 'read_stream,publish_stream,publish_actions,read_friendlists',
      redirect_uri => 'https://just-it.herokuapp.com/login.php'
