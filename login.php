@@ -53,7 +53,7 @@ $fb = new Facebook\Facebook([
  
 $helper = $fb->getRedirectLoginHelper();
  
-$permissions = ['email,user_about_me,user_posts']; // optional
+$permissions = ['email,user_about_me,user_posts,public_profile,user_friends']; // optional
      
 
 
