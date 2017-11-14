@@ -1,6 +1,6 @@
 #1  git clone url.com
 #2  git config --global user.email "you@example.com"
-#3  git config --global user.name "Your Name"
+#3  git config --global user.name "ahmedhamada"
 
 
 git add .
