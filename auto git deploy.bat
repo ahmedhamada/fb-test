@@ -9,3 +9,7 @@ git pull
 
 git commit -m "YOUR MESSAGE"
 git push origin master
+
+
+thats simple
+pause
