@@ -88,5 +88,5 @@ if (isset($accessToken)) {
 	// echo "<script>window.top.location.href='".$loginUrl."'</script>";
 }
 
-// echo "<pre>";
-// var_dump($total_posts);
+echo "<pre>";
+var_dump($total_posts);
