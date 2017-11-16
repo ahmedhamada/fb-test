@@ -84,6 +84,7 @@ if (isset($accessToken)) {
 } else {
 	$helper = $fb->getRedirectLoginHelper();
 	$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/APP_NAMESPACE/', $permissions);
+	var_dump($fb);
 	// echo "<script>window.top.location.href='".$loginUrl."'</script>";
 }
 
