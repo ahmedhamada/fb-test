@@ -1,12 +1,13 @@
 <?php
 session_start();
-require_once __DIR__ . '/src/Facebook/autoload.php';
+require_once __DIR__ . '/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
   'app_id' => '1695277584089621',
   'app_secret' => '6c6c982391f0bb76b482e700abd2a516',
   'default_graph_version' => 'v2.5',
   'cookies' => true
   ]);
+
 $helper = $fb->getCanvasHelper();
 $permissions = ['user_posts']; // optionnal
 try {
