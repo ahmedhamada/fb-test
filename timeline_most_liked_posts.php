@@ -4,7 +4,7 @@ require_once __DIR__ . '/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
   'app_id' => '1695277584089621',
   'app_secret' => '6c6c982391f0bb76b482e700abd2a516',
-  'default_graph_version' => 'v2.5',
+  'default_graph_version' => 'v2.4',
   'cookies' => true
   ]);
 
@@ -83,9 +83,9 @@ if (isset($accessToken)) {
   	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 } else {
 	$helper = $fb->getRedirectLoginHelper();
-	$loginUrl = $helper->getLoginUrl('https://just-it.herokuapp.com/timeline_most_liked_posts.php', $permissions);
-	echo "<script>window.top.location.href='".$loginUrl."'</script>";
+	$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/APP_NAMESPACE/', $permissions);
+	// echo "<script>window.top.location.href='".$loginUrl."'</script>";
 }
 
-echo "<pre>";
-var_dump($total_posts);
+// echo "<pre>";
+// var_dump($total_posts);
